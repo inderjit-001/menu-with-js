@@ -91,6 +91,26 @@
     input:checked~.hamburger-menu .ri-close-line {
       opacity: 1;
     }
+
+
+    .hamburger-menu {
+      display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      .hamburger-menu {
+        display: block;
+      }
+
+      ul {
+        display: none;
+      }
+
+
+      #menu-toggle:checked~ul {
+        display: flex;
+      }
+    }
   </style>
 </head>
 
@@ -98,13 +118,13 @@
   <div class="container">
     <header>
       <div class="navbar">
-        <!-- <input type="checkbox" class="click" name="chlick"> -->
+        <div class="logo">Logo</div>
         <input type="checkbox" id="menu-toggle">
         <label class="hamburger-menu" for="menu-toggle">
           <i class="ri-menu-line"></i>
           <i class="ri-close-line"></i>
         </label>
-        <ul class="">
+        <ul>
           <li><a href="#" class="">Home</a></li>
           <li><a href="#" class="">Features</a></li>
           <li><a href="#" class="">Pricing</a></li>
