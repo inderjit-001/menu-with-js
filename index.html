@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Hello, world!</title>
+  <style>
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .click {
+      position: absolute;
+      z-index: 9;
+      right: 10px
+    }
+
+    input:checked~ul {
+      position: absolute;
+      background: aliceblue;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+    .hamburger-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      z-index: 99;
+      top: -5px;
+
+    }
+
+    input {
+      cursor: pointer;
+      opacity: 0;
+      display: none;
+    }
+
+    .hamburger-menu i {
+      font-size: 24px;
+      position: absolute;
+      transition: opacity 0.3s ease;
+    }
+
+    .hamburger-menu .ri-menu-line {
+      opacity: 1;
+    }
+
+    .hamburger-menu .ri-close-line {
+      opacity: 0;
+    }
+
+    input:checked~.hamburger-menu .ri-menu-line {
+      opacity: 0;
+    }
+
+    input:checked~.hamburger-menu .ri-close-line {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="navbar">
+        <!-- <input type="checkbox" class="click" name="chlick"> -->
+        <input type="checkbox" id="menu-toggle">
+        <label class="hamburger-menu" for="menu-toggle">
+          <i class="ri-menu-line"></i>
+          <i class="ri-close-line"></i>
+        </label>
+        <ul class="">
+          <li><a href="#" class="">Home</a></li>
+          <li><a href="#" class="">Features</a></li>
+          <li><a href="#" class="">Pricing</a></li>
+          <li><a href="#" class="">FAQs</a></li>
+          <li><a href="#" class="">About</a></li>
+        </ul>
+
+      </div>
+    </header>
+  </div>
+
+
+
+
+</body>
+
+
+
+</html>
